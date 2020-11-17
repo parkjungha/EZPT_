@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity">
 
+    <!--modification메롱메롱ㅁ메로-->
     <TextView
+
         android:id="@+id/appTitle"
         android:layout_width="184dp"
         android:layout_height="wrap_content"
@@ -66,7 +68,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_weight="1"
-            android:onClick="singUp"
             android:text="@string/signup" />
 
         <Button
@@ -79,5 +80,11 @@
             android:text="@string/signin" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/testsync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test" />
 
 </RelativeLayout>
