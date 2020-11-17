@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSkyBlue"
+    >
+
+    <TextView
+        android:id="@+id/profileSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/shrikhand"
+        android:text="@string/profile_setting"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/userImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="79dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/userType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileSetting"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <RadioGroup
+        android:id="@+id/userType"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/UserType"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/trainee"
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:text="Trainee" />
+
+        <RadioButton
+            android:id="@+id/trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trainer" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/UserType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="210dp"
+        android:fontFamily="@font/shrikhand"
+        android:text="User Type : "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Sex"
+        app:layout_constraintEnd_toStartOf="@+id/userType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/shrikhand"
+        android:text="Sex : "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/preferredPlace"
+        app:layout_constraintEnd_toStartOf="@+id/sex"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserType" />
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/preferredRegion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Sex"
+        app:layout_constraintTop_toBottomOf="@+id/userType">
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="92dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Male" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/preferredRegion"
+        android:layout_width="211dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Preferred Region"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/selfDescriptionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/preferredPlace"
+        app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+    <TextView
+        android:id="@+id/preferredPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/shrikhand"
+        android:text="Preferred Place : "
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/selfDescription"
+        app:layout_constraintEnd_toStartOf="@+id/preferredRegion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sex" />
+
+    <TextView
+        android:id="@+id/selfDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/shrikhand"
+        android:text="Self Description : "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/selfDescriptionText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preferredPlace" />
+
+    <EditText
+        android:id="@+id/selfDescriptionText"
+        android:layout_width="212dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selfDescription"
+        app:layout_constraintTop_toBottomOf="@+id/preferredRegion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
