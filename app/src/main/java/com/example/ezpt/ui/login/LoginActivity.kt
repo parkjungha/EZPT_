@@ -29,11 +29,7 @@ class LoginActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_signIn).setOnClickListener {
             signIn()
         }
-        // Test
-        findViewById<Button>(R.id.test_btn).setOnClickListener {
-            val nextIntent = Intent(this, MainActivity::class.java)
-            startActivity(nextIntent)
-        }
+
     }
 
     fun signIn() {
