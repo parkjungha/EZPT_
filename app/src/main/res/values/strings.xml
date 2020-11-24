@@ -12,7 +12,7 @@
     <string name="login_succeeded">"Login succeeded"</string>
     <string name="login_failed">"Login failed"</string>
     <string name="register_succeeded">"Register succeeded"</string>
-    <string name="register_failed">"Register failed"</string>
+    <string name="register_failed">"Register failed. Try again."</string>
     <string name="app_title">"E Z P T"</string>
     <string name="profile_setting">"Profile Setting"</string>
     <string name="search">"Search"</string>

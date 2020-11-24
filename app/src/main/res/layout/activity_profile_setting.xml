@@ -162,4 +162,14 @@
         app:layout_constraintStart_toEndOf="@+id/selfDescription"
         app:layout_constraintTop_toBottomOf="@+id/preferredRegion" />
 
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="629dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -59,31 +59,19 @@
         android:id="@+id/textView6"
         android:layout_width="315dp"
         android:layout_height="107dp"
-        android:layout_marginBottom="17dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/toDo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="369dp" />
 
-    <TextView
-        android:id="@+id/toDo"
+    <Button
+        android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="18dp"
-        android:fontFamily="@font/shrikhand"
-        android:text="To-do Exercise"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
+        android:text="back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="665dp" />
 
-    <CheckedTextView
-        android:id="@+id/checkedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckedTextView"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="542dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
