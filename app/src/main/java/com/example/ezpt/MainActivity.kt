@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.ezpt.ui.login.LoginActivity
 import com.example.ezpt.ui.login.SearchTrainerActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.chat_btn).setOnClickListener {
             val nextIntent = Intent(this, ChatActivity::class.java)
+            startActivity(nextIntent)
+        }
+        findViewById<Button>(R.id.logout_btn).setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val nextIntent = Intent(this, LoginActivity::class.java)
             startActivity(nextIntent)
         }
     }
