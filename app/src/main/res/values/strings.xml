@@ -15,7 +15,8 @@
     <string name="register_failed">"Register failed. Try again."</string>
     <string name="app_title">"E Z P T"</string>
     <string name="profile_setting">"Profile Setting"</string>
-    <string name="search">"Search"</string>
+    <string name="search_trainer">"Search Trainer"</string>
+    <string name="search_trainee">"Search Trainee"</string>
     <string name="mypage">"My Page"</string>
     <string name="chat">"Chat"</string>
     <string name="logout">"Logout"</string>

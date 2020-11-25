@@ -13,8 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/shrikhand"
-        android:text="Search My Trainer"
+        android:text="Search Trainer"
         android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/trainer_recycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,13 +27,16 @@
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainer_recycler" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="628dp"
-        android:layout_marginBottom="1dp"
+        android:id="@+id/trainer_recycler"
+        android:layout_width="400dp"
+        android:layout_height="420dp"
         app:layout_constraintBottom_toTopOf="@+id/back_btn"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchTrainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

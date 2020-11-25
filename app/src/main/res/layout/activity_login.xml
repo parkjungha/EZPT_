@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_weight="1"
-            android:onClick="signUp"
+            android:fontFamily="@font/shrikhand"
             android:text="@string/signup" />
 
         <Button
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="50dp"
             android:layout_weight="1"
-            android:onClick="signIn"
+            android:fontFamily="@font/shrikhand"
             android:text="@string/signin" />
 
     </LinearLayout>

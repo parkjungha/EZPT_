@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/username_textview"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="#96B3B6"
+        android:gravity="right"
+        android:text="JeongHa"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/sex_textview"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="#E3D3D3"
+        android:gravity="right"
+        android:text="Female"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/region_textview"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="#E3D3D3"
+        android:gravity="right"
+        android:text="Nowon-gu"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="#E3D3D3"
+        android:gravity="right"
+        android:text="Welcome Everyone"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+</LinearLayout>

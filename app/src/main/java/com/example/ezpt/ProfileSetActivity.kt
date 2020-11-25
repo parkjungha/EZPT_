@@ -8,18 +8,23 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import com.example.ezpt.data.Users
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_profile_set.*
 
 class ProfileSetActivity : AppCompatActivity() {
     var firestore : FirebaseFirestore? = null
+    var auth: FirebaseAuth? = null
+    var currentUserEmail : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_set)
 
+        auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
+        currentUserEmail = auth?.currentUser?.email!!
 
         findViewById<Button>(R.id.done_btn).setOnClickListener {
             val nextIntent = Intent(this, MainActivity::class.java)
@@ -37,11 +42,11 @@ class ProfileSetActivity : AppCompatActivity() {
         var region = preferredRegion.text.toString()
         var description = selfDescriptionText.text.toString()
 
-        createData(username,usertype,sex,region,description)
+        createData(username,currentUserEmail,usertype,sex,region,description)
     }
 
-     fun createData(username: String, userType: String, sex: String, region: String, description: String) {
-        val user = Users(username, userType, sex, region, description)
+     fun createData(username: String, email: String, userType: String, sex: String, region: String, description: String) {
+        val user = Users(username, email, userType, sex, region, description)
          firestore?.collection("Users")?.document()?.set(user)?.
          addOnCompleteListener{
                  task ->

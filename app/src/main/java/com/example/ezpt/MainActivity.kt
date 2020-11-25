@@ -13,16 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.search_btn).setOnClickListener {
-            // if user type이 trainer이면 ?
+        findViewById<Button>(R.id.search_trainee_btn).setOnClickListener {
             val nextIntent = Intent(this, SearchTraineeActivity::class.java)
-            // if user type이 trainee이면 ?
-            //val nextIntent = Intent(this, SearchTrainerActivity::class.java)
+            startActivity(nextIntent)
+        }
+        findViewById<Button>(R.id.search_trainer_btn).setOnClickListener {
+            val nextIntent = Intent(this, SearchTrainerActivity::class.java)
             startActivity(nextIntent)
         }
         findViewById<Button>(R.id.mypage_btn).setOnClickListener {
             // if user type이 trainer이면 ?
-            val nextIntent = Intent(this, MypageTrainerActivity::class.java)
+            val nextIntent = Intent(this, MypageTraineeActivity::class.java)
             // if user type이 trainee이면 ?
             //val nextIntent = Intent(this, MypageTraineeActivity::class.java)
             startActivity(nextIntent)
